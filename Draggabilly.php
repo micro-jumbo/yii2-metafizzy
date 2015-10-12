@@ -13,7 +13,7 @@ use yii\base\Widget;
  *
  * @author Pierre M <devleaks.be@gmail.com>
  */
-class Masonry extends Widget {
+class Draggabilly extends Widget {
     /**
      * @var array the HTML attributes for the div tag.
      * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
@@ -24,8 +24,6 @@ class Masonry extends Widget {
      * @var array Plugin options
      */
     public $pluginOptions = [
-        'itemSelector' => '.item',
-        'columnWidth'  => 200
 	];
 
     /**
@@ -48,8 +46,6 @@ class Masonry extends Widget {
      */
     public function run()
     {
-        echo Html::beginTag('div', $this->options); //opens the container
-        echo Html::endTag('div'); //closes the container, opened on init
         $this->registerAssets();
     }
 
@@ -59,8 +55,8 @@ class Masonry extends Widget {
     protected function registerAssets()
     {
         $view = $this->getView();
-        MasonryAsset::register($view);
-        $js = '$("#' . $this->options['id'] . '").masonry(' . $this->getPluginOptions() . ');';
+        DraggabillyAsset::register($view);
+        $js = '$("#' . $this->options['id'] . '").draggabilly(' . $this->getPluginOptions() . ');';
         $view->registerJs($js, $view::POS_END);
     }
 

@@ -15,9 +15,9 @@
         "yiisoft/yii2-bootstrap": "*",
         "bower-asset/packery": "*",
         "bower-asset/draggabilly": "*",
-        "bower-asset/isotope": "*",
+        "bower-asset/isotope": "2.*",
         "bower-asset/masonry": "*",
-		"bower-asset/imagesloaded" : "*"
+        "bower-asset/imagesloaded" : "*"
     },
     "autoload": {
         "psr-4": {

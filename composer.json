@@ -15,9 +15,18 @@
         "yiisoft/yii2-bootstrap": "*",
         "bower-asset/packery": "*",
         "bower-asset/draggabilly": "*",
-        "bower-asset/isotope": "2.*",
+        "bower-asset/isotope": "*",
         "bower-asset/masonry": "*",
         "bower-asset/imagesloaded" : "*"
+    },
+    "extra": {
+        "asset-repositories": [
+            {
+                "name": "bower-asset/eventemitter",
+                "type": "bower-vcs",
+                "url": "git://github.com/Olical/EventEmitter.git"
+            }
+        ]
     },
     "autoload": {
         "psr-4": {

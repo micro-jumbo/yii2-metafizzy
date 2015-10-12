@@ -1,5 +1,5 @@
 {
-    "name": "devleaks/yii2-metafizzy",
+    "name": "micro-jumbo/yii2-metafizzy",
     "description": "Yii2 asset bundle wrapper around several David DeSandro javascript libraries",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","masonry", "isotope", "packery", "metafizzy", "draggabilly"],

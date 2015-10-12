@@ -40,6 +40,7 @@ class Isotope extends Widget {
             $this->options['id'] = $this->getId();
         }
         parent::init();
+        echo Html::beginTag('div', $this->options); //opens the container
     }
 
     /**
@@ -48,7 +49,6 @@ class Isotope extends Widget {
      */
     public function run()
     {
-        echo Html::beginTag('div', $this->options); //opens the container
         echo Html::endTag('div'); //closes the container, opened on init
         $this->registerAssets();
     }

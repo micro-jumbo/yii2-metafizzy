@@ -26,7 +26,7 @@ class Isotope extends Widget {
     public $pluginOptions = [
         'itemSelector' => '.item',
         'layoutMode'  => 'fitRows'
-	];
+    ];
 
     /**
      * Initializes the object.
@@ -39,8 +39,8 @@ class Isotope extends Widget {
         if (!isset($this->options['id'])) {
             $this->options['id'] = $this->getId();
         }
-        parent::init();
         echo Html::beginTag('div', $this->options); //opens the container
+        parent::init();
     }
 
     /**

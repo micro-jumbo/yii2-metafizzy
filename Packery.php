@@ -39,6 +39,7 @@ class Packery extends Widget {
         if (!isset($this->options['id'])) {
             $this->options['id'] = $this->getId();
         }
+        echo Html::beginTag('div', $this->options); //opens the container
         parent::init();
     }
 
@@ -48,7 +49,6 @@ class Packery extends Widget {
      */
     public function run()
     {
-        echo Html::beginTag('div', $this->options); //opens the container
         echo Html::endTag('div'); //closes the container, opened on init
         $this->registerAssets();
     }

@@ -60,7 +60,9 @@ class Isotope extends Widget {
     {
         $view = $this->getView();
         IsotopeAsset::register($view);
-        $js = '$("#' . $this->options['id'] . '").isotope(' . $this->getPluginOptions() . ');';
+        $elem = '$("#' . $this->options['id'] . '")';
+        $js = $elem.'.isotope(' . $this->getPluginOptions() . ');';
+        $js .= $elem.'.imagesLoaded().progress( function() { '.$elem.'.isotope('layout'); });';
         $view->registerJs($js, $view::POS_END);
     }
 

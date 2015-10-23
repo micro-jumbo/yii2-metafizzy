@@ -18,5 +18,6 @@ class IsotopeAsset extends AssetBundle
 
     public $depends = [
         'yii\web\JqueryAsset',
+        'devleaks\metafizzy\ImageLoadedAsset'
     ];
 }
